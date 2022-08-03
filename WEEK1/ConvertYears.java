@@ -6,7 +6,7 @@ public class ConvertYears {
         Scanner input = new Scanner(System.in);
         be = input.nextInt();
         ad = be + to_AD;
-        System.out.print("B.D. to A.D is " + ad);
+        System.out.println("B.D. to A.D is " + ad);
         input.close();
     }
 }
