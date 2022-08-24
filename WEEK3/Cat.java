@@ -23,9 +23,11 @@ public class Cat {
     private void setColor(String c){
         color = c;
     }
+
     public void upWeight(double w){
         setWeight(weight+w);
     }
+    
     public void downWeight(double w){
         if (weight - w <= 0){
             System.out.println("Error");
@@ -46,15 +48,15 @@ public class Cat {
         System.out.println("Height : "+height);
         System.out.println("Weight : "+weight);
     }
-    public static void main(String[] args) {
-        Cat c = new Cat();
-        c.defineCat("Mew","White");
-        c.speak();
-        c.upWeight(5);
-        c.upHeight(10);
-        c.speak();
-        c.upWeight(-5);
-        c.upHeight(-10);
-        c.speak();
-    }
+    // public static void main(String[] args) {
+    //     Cat c = new Cat();
+    //     c.defineCat("Mew","White");
+    //     c.speak();
+    //     c.upWeight(5);
+    //     c.upHeight(10);
+    //     c.speak();
+    //     c.upWeight(-5);
+    //     c.upHeight(-10);
+    //     c.speak();
+    // }
 }
