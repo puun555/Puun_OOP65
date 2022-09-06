@@ -36,6 +36,7 @@ public class Customer extends CheckingAccount{
         return acct;
     }
 
+    @Override
     public String toString() {
         if (acct == null) {return firstName + " " + lastname + " doesn't have account.";}
         else {return "The " + firstName + " account has " + acct.balance + " baht and " + acct.getCredit() + " credits.";}

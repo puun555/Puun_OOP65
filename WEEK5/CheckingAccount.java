@@ -27,17 +27,22 @@ public class CheckingAccount extends Account {
     }
 
     public void withdraw(double a) {
-        if (balance - a >= 0) {
-            balance -= a;
+        if (a > 0) {
+            if (balance - a >= 0) {
+                balance -= a;
+                System.out.println( a + " baht is withdrawn from "+ name + " and your credit balance is " + this.credit + ".");
+            }
+            else if (balance + this.credit - a >= 0) {
+                this.credit -= a - balance;
+                balance = 0;
+                System.out.println( a + " baht is withdrawn from "+ name + " and your credit balance is " + this.credit + ".");
+            }
+            else {
+                System.out.println("Not enough money!");
+            }
         }
-        else if (balance + this.credit - a >= 0) {
-            this.credit -= a - balance;
-            balance = 0;
-            System.out.println( a + " baht is withdrawn from "+ name + " and your credit balance is " + this.credit + ".");
-        }
-
         else {
-            System.out.println("Not enough money!");
+            System.out.println("Input number must be a positive integer.");
         }
     }
 
@@ -46,6 +51,6 @@ public class CheckingAccount extends Account {
     }
     
     public String toString() {
-        return "The " + name + " account has " + balance + " bath and " + credit + " credits.";
+        return ("The " + name + " account has " + balance + " bath and " + credit + " credits.");
     }
 }

@@ -15,12 +15,12 @@ public class Main {
         // a1.showAccount();
 
         //(2.1) OKOK
-        // CheckingAccount a1 = new CheckingAccount(50000,"61070033",5000);
-        // a1.showAccount();
-        // a1.deposit(500);
-        // System.out.println(a1);
-        // a1.withdraw("40000.0");
-        // System.out.println(a1.toString());
+        CheckingAccount a1 = new CheckingAccount(50000,"61070033",5000);
+        a1.showAccount();
+        a1.deposit(500);
+        System.out.println(a1);
+        a1.withdraw("40000.0");
+        System.out.println(a1.toString());
 
         //(2.2) nice!!
         // CheckingAccount a1 = new CheckingAccount();
