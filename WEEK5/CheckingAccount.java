@@ -51,6 +51,6 @@ public class CheckingAccount extends Account {
     }
     
     public String toString() {
-        return ("The " + name + " account has " + balance + " bath and " + credit + " credits.");
+        return ("The " + name + " account has " + balance + " baht and " + credit + " credits.");
     }
 }

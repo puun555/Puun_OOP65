@@ -2,7 +2,7 @@ package WEEK5;
 
 public class Customer extends CheckingAccount{
     private String firstName;
-    private String lastname;
+    private String lastName;
     private CheckingAccount acct;
 
     public Customer() {
@@ -13,7 +13,7 @@ public class Customer extends CheckingAccount{
     }
     public Customer(String firstName, String lastName, CheckingAccount acct) {
         this.firstName = firstName;
-        this.lastname = lastName;
+        this.lastName = lastName;
         this.acct = acct;
     }
 
@@ -23,11 +23,11 @@ public class Customer extends CheckingAccount{
     public String getFirstName() {
         return firstName;
     }
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
     public void setAcct(CheckingAccount acct) {
         this.acct = acct;
@@ -38,14 +38,14 @@ public class Customer extends CheckingAccount{
 
     @Override
     public String toString() {
-        if (acct == null) {return firstName + " " + lastname + " doesn't have account.";}
+        if (acct == null) {return firstName + " " + lastName + "  doesn’t have account.";}
         else {return "The " + firstName + " account has " + acct.balance + " baht and " + acct.getCredit() + " credits.";}
         
     }
 
 
     public boolean equals(Customer c) {
-        if (this.lastname.equals(c.lastname)){
+        if (this.lastName.equals(c.lastName)){
             return true;
         }
         else {

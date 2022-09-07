@@ -11,7 +11,7 @@ public class Account {
 
     public void deposit(double a) {
         if (a > 0) {
-            System.out.println(a + " baht is deposited to " + name + " .");
+            System.out.println(a + " baht is deposited to " + name + ".");
             this.balance += a;
         }
         else {
@@ -25,7 +25,7 @@ public class Account {
                 System.out.println("Not enough money!");
             }
             else if (a > 0) {
-                System.out.println(a + " baht is withdrawn to " + name + " .");
+                System.out.println(a + " baht is withdrawn from " + name + ".");
                 this.balance -= a;
             }
         }
@@ -51,6 +51,6 @@ public class Account {
     }
 
     public void showAccount() {
-        System.out.println(name + " account has " + balance + " baht");
+        System.out.println(name + " account has " + balance + " baht.");
     }
 }
